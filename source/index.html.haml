@@ -3,14 +3,22 @@ title: Welcome to Agnes
 ---
 
 .wrapper
-  .header
-    .name
-      %h1 Agnes
-    .links
-      %h3 About me    Projects    Contact
+  .header.py-6
+    .flex.items-center.justify-between.mx-auto.px-4
+      .name
+        %h1 Agnes
+      .links
+        %ul.flex.items-center.list-reset
+          %li.m-4
+            %a.no-underline.text-white.hover:text-black{href: "#"} About me
+          %li.m-4
+            %a.no-underline.text-white.hover:text-black{href: "#"} Projects
+          %li.m-4
+            %a.no-underline.text-white.hover:text-black{href: "#"} Contact
+
 
   .images
-    %img{src: "images/prufa.jpeg"}
+    %img{src: 'images/prufa.jpeg'}
 
   .resume
     %h3 Resume
