@@ -18,18 +18,25 @@ title: Welcome to Agnes
 
 
   .images
-    %img{src: 'images/frosinfoss'}
+    -#%img{src: 'images/'}
+    %h3 Agnes Konradsdottir
 
-  .resume
-    %h3 Resume
+  .resume.flex.justify-between
+    %p Are you recruiting? You'r welcome to take a look at my resume
+    %button.resume View Resume
 
 
   .aboutme
     %h3 Who am I
-
+    - data.me.each do |me|
+      %h3= me[:description]
 
   .projects
-    %h3 What have I been doing
+    %h3 What have I done
+    .projects-info
+      - data.projects.each do |project|
+        %img{src: project[:image]}
+
 
 
   .contact

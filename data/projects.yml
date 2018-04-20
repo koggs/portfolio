@@ -1,0 +1,26 @@
+
+
+- name: Library-challenge
+  link: https://github.com/koggs/library-challenge
+  image: images/l.jpg
+  description: Our first weekend challenge was to build a library application using Ruby and rspec, where it's possible to search, borrow and return books.
+
+- name: Address-book
+  link: https://github.com/koggs/Address-book
+  image: images/address-book.jpg
+  description: In our 2nd week we built an address-book application using Javascript APIs where it's possible to store and delete addresses, in this project we used cucumber-js, mocha and chai.
+
+- name: ATM
+  link: https://github.com/koggs/ATM
+  image: images/atm.jpg
+  description: The first larger project in our prep-course was to build a virtual ATM which holds funds, can make withdrawals and deposits. we buildt this using Ruby and tested it with rspec.
+
+- name: BMI-challenge
+  link: https://github.com/koggs/BMI-challenge
+  image: images/bodymassindex.png
+  description: The last project in our prepcourse was to build a BMI calculator using Javascript that can take both metric and imperial measures.
+
+- name: Prep-course
+  link: https://github.com/koggs/prep_course
+  image: images/CA.png
+  description: A collection of some of my prep-course projects.

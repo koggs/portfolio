@@ -1,14 +1,15 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-  'header header'
-  'image image'
-  'profile profile'
-  'resume resume'
-  'aboutme projects'
-  'contact contact'
+  'header'
+  'image'
+  'profile'
+  'resume'
+  'aboutme'
+  'projects'
+  'contact'
 }
 
 .header {
@@ -19,14 +20,17 @@
 
 .images {
   grid-area: image;
-  img {
-    width:100%;
-    max-height: 600px;
-  }
+  background-image: url('../images/jokull.jpg') ;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  background-size: 100%;
+  min-height: 700px;
 }
 
 .resume {
   grid-area: resume;
+  min-height: 125px;
   background-color: blueviolet;
 }
 
@@ -39,7 +43,18 @@
 .projects {
   grid-area: projects;
   background-color: darkgreen;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: ".... info  ....";
 }
+
+.projects-info {
+  grid-area: info;
+  img {
+    height: 230px;
+    width: 350px;
+  }
+ }
 
 .contact {
   grid-area: contact;
