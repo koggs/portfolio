@@ -28,15 +28,15 @@ title: Welcome to Agnes
   .resume.animated.pulse#resume
     .center
       %h3
-        %span Are you recruiting? You'r welcome to take a look at my resume.
+        %span Are you recruiting? You are welcome to take a look at my resume.
         %span
-          %a.no-underline.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "#"} View Resume
+          %a.no-underline.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "assets/Ferilskra.pdf"} View Resume
 
 
   .aboutme#aboutme
-    %h3 Who am I
+    %h3.center About me
     - data.me.each do |me|
-      %h3= me[:description]
+      %h3.center= me[:description]
 
 
   .projects#projects
