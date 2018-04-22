@@ -10,53 +10,221 @@
   'aboutme'
   'projects'
   'contact'
+  'footer'
 }
 
 .header {
   grid-area: header;
-  background: green;
+  background: #1995AD;
+  color: #BCBABE
+
 }
 
 
 .images {
   grid-area: image;
   background-image: url('../images/jokull.jpg') ;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
   background-size: 100%;
   min-height: 700px;
+
+}
+
+.image-text {
+  text-align: center;
+  padding-top: 300px;
+  line-height: 350%;
+  h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+  }
+  p {
+    font-family: 'Dosis', sans-serif;
+
+  }
+  .title {
+    font-size: 30px;
+  }
+  .skills {
+    font-size: 20px;
+  }
 }
 
 .resume {
   grid-area: resume;
   min-height: 125px;
-  background-color: blueviolet;
+  background-color: #1E1F26;
+  padding-top: 50px;
+  color: #F1F1F2
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .aboutme {
   grid-area: aboutme;
-  background-color: aquamarine;
+  background-color: #A1D6E2;
 }
 
 
 .projects {
   grid-area: projects;
-  background-color: darkgreen;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-areas: ".... info  ....";
+  background-color: #F1F1F2;
+  h1 {
+    text-align: center;
+  }
 }
 
-.projects-info {
-  grid-area: info;
-  img {
-    height: 230px;
-    width: 350px;
-  }
+.projects-cards {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+.project-card {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+
+  padding-top: 10px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-row-gap: 20px;
+  grid-column-gap: 50px;
+
  }
 
 .contact {
   grid-area: contact;
-  background-color: crimson;
+  background-color: #A1D6E2;
+  min-height: 125px;
+  padding-top: 50px;
 }
+
+.footer {
+  grid-area: footer;
+  background-color: #1995AD;
+  min-height: 100px;
+}
+
+
+.portfolio-wrapper.animate-in:hover {
+
+}
+
+.hover-layer {
+  width: 100%;
+  padding-top: 75%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  opacity: 0;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.hover-layer-content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.hover-layer-content h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 25px;
+  //text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300 !important;
+  line-height: 1.5;
+  font-size: 28px;
+}
+
+.hover-layer-content p {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  //text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300 !important;
+  line-height: 1.5;
+  font-size: 18px;
+  padding-top: 20px;
+}
+
+.hover-layer-content a {
+  display: inline-block !important;
+  margin-left: 50% !important;
+  transform: translateX(-50%);
+  background-color: #7F2D28;
+  color: #fff;
+  border-color: #7F2D28 !important;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -ms-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+.hover-layer-content a:hover {
+  color: #fff !important;
+  background-color: #5c201d !important;
+  border-color: #5c201d !important;
+}
+
+.portfolio-wrapper {
+  width: 100%;
+  padding-top: 75%;
+  position: relative;
+  //background-color: gray;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover ;
+  background-position: center center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.portfolio-wrapper .hover-layer {
+  animation-name: scale-out;
+  animation-duration: .35s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.portfolio-wrapper .hover-layer-content h2 {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.portfolio-wrapper.animate-in {
+  opacity: 1;
+
+  animation-name: scale-in;
+  animation-duration: .35s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.portfolio-wrapper:hover .hover-layer {
+  opacity: 1;
+
+  animation-name: scale-in;
+  animation-duration: .35s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+

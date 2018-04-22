@@ -10,34 +10,54 @@ title: Welcome to Agnes
       .links
         %ul.flex.items-center.list-reset
           %li.m-4
-            %a.no-underline.text-white.hover:text-black{href: "#"} About me
+            %a.no-underline.text-white.hover:text-black{href: "index.html#aboutme"} About me
           %li.m-4
-            %a.no-underline.text-white.hover:text-black{href: "#"} Projects
+            %a.no-underline.text-white.hover:text-black{href: "index.html#projects"} Projects
           %li.m-4
-            %a.no-underline.text-white.hover:text-black{href: "#"} Contact
+            %a.no-underline.text-white.hover:text-black{href: "index.html#contact"} Contact
 
 
   .images
-    -#%img{src: 'images/'}
-    %h3 Agnes Konradsdottir
-
-  .resume.flex.justify-between
-    %p Are you recruiting? You'r welcome to take a look at my resume
-    %button.resume View Resume
+    .image-text
+      %h1 Agnes Konradsdottir
+      %p.title Bootcamper
+      %p.skills HTML - CSS - JavaScript - Ruby
 
 
-  .aboutme
+  .resume
+    .center
+      %h3
+        %span Are you recruiting? You'r welcome to take a look at my resume.
+        %span
+          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "#"} View Resume
+
+
+  .aboutme#aboutme
     %h3 Who am I
     - data.me.each do |me|
       %h3= me[:description]
 
-  .projects
-    %h3 What have I done
-    .projects-info
-      - data.projects.each do |project|
-        %img{src: project[:image]}
 
+  .projects#projects
+    %h1 My Projects
+    .projects-cards
+      .empty
+      .project-card
+        - data.projects.each_with_index do |project, index|
+          %div{class: "project-\#{index}"}
+            .portfolio-wrapper.animate-in{style: "background-image: url(#{ project[:image] })"}
+              .hover-layer
+                .hover-layer-content
+                  %h2= project[:name]
+                  %a{href: "#{project[:link]}"} View project on Github
+                  %p= project[:description]
 
+  .contact#contact
+    .center
+      %h3
+        %span You can contact me at:
+        %span
+          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "mailto:agneskonradsdottir@gmail.com"} Click to email
+          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "https://www.linkedin.com/in/agneskonradsdottir"} Linkedin
 
-  .contact
-    %h3 where am I
+  .footer
