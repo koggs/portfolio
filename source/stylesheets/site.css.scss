@@ -16,7 +16,11 @@
 .header {
   grid-area: header;
   background: #1995AD;
-  color: #BCBABE
+  color: #BCBABE;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 
 }
 
@@ -101,15 +105,20 @@
 
 .contact {
   grid-area: contact;
-  background-color: #A1D6E2;
+  background-color: #1E1F26;
   min-height: 125px;
   padding-top: 50px;
+  color: #F1F1F2
 }
 
 .footer {
   grid-area: footer;
   background-color: #1995AD;
   min-height: 100px;
+  img {
+    height: 50px;
+    width: auto;
+  }
 }
 
 

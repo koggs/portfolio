@@ -1,0 +1,17 @@
+- logo: images/CA.png
+  link: https://www.craftacademy.se/
+
+- logo: images/Octocat.jpg
+  link: https://github.com/
+
+- logo: images/JS-logo.png
+  link: https://www.javascript.com/
+
+- logo: images/Logo_jasmine.svg.png
+  link: https://jasmine.github.io/
+
+- logo: images/rspec-logo.png
+  link: http://rspec.info/
+
+- logo: images/ruby.jpg
+  link: https://www.ruby-lang.org/en/

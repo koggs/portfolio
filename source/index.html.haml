@@ -6,7 +6,8 @@ title: Welcome to Agnes
   .header.py-6
     .flex.items-center.justify-between.mx-auto.px-4
       .name
-        %h1 Agnes
+        %h1
+          %a.no-underline{href: "index.html#images"} AK
       .links
         %ul.flex.items-center.list-reset
           %li.m-4
@@ -17,19 +18,19 @@ title: Welcome to Agnes
             %a.no-underline.text-white.hover:text-black{href: "index.html#contact"} Contact
 
 
-  .images
+  .images#images
     .image-text
       %h1 Agnes Konradsdottir
       %p.title Bootcamper
       %p.skills HTML - CSS - JavaScript - Ruby
 
 
-  .resume
+  .resume.animated.pulse#resume
     .center
       %h3
         %span Are you recruiting? You'r welcome to take a look at my resume.
         %span
-          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "#"} View Resume
+          %a.no-underline.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "#"} View Resume
 
 
   .aboutme#aboutme
@@ -57,7 +58,12 @@ title: Welcome to Agnes
       %h3
         %span You can contact me at:
         %span
-          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "mailto:agneskonradsdottir@gmail.com"} Click to email
-          %a.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "https://www.linkedin.com/in/agneskonradsdottir"} Linkedin
+          %a.no-underline.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "mailto:agneskonradsdottir@gmail.com"} Click to email
+          %a.no-underline.font-bold.py-2.px-4.rounded.bg-blue.text-black.hover:bg-blue-dark{href: "https://www.linkedin.com/in/agneskonradsdottir"} Linkedin
 
   .footer
+    .flex.flex-row-reverse
+      - data.skills_logos.each do |logo|
+        %a{href: "#{logo[:link]}"}
+          %img{src: "#{logo[:logo]}"}/
+
